@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product & Experience Growth Profiles – 2026 🌱</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #0e1117;
+  --bg2: #161b24;
+  --bg3: #1c2333;
+  --bg4: #222b3a;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --teal: #00d4a0;
+  --teal-dim: rgba(0,212,160,0.1);
+  --teal-glow: rgba(0,212,160,0.18);
+  --blue: #4b9cdb;
+  --blue-dim: rgba(75,156,219,0.1);
+  --purple: #9b72f5;
+  --purple-dim: rgba(155,114,245,0.1);
+  --amber: #f0a500;
+  --amber-dim: rgba(240,165,0,0.1);
+  --coral: #f06060;
+  --coral-dim: rgba(240,96,96,0.1);
+  --green: #4ade80;
+  --green-dim: rgba(74,222,128,0.1);
+  --text: #e8eaf0;
+  --text2: #8b92a5;
+  --text3: #555f75;
+  --white: #ffffff;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── SANDBOX BANNER ── */
+.sandbox-banner {
+  background: rgba(0,212,160,0.07);
+  border-bottom: 1px solid rgba(0,212,160,0.18);
+  text-align: center;
+  padding: 9px 20px;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--teal);
+  font-family: 'Syne', sans-serif;
+}
+
+/* ── LEADER HEADER ── */
+.ldr-header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 48px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ldr-header::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,212,160,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ldr-eyebrow {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--teal); font-weight: 700; margin-bottom: 8px; position: relative;
+}
+.ldr-title {
+  font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800;
+  color: var(--white); margin-bottom: 4px; position: relative;
+}
+.ldr-sub { font-size: 13px; color: var(--text2); margin-bottom: 22px; position: relative; }
+
+.hdr-meta { display: flex; flex-wrap: wrap; gap: 8px; position: relative; }
+.hdr-chip {
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border2);
+  border-radius: 20px; padding: 5px 13px; font-size: 11px; color: var(--text2);
+}
+.hdr-chip span { color: var(--teal); font-weight: 700; }
+
+/* ── STICKY FILTER ── */
+.filter-bar {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+}
+.filter-inner {
+  display: flex; align-items: center;
+  overflow-x: auto; scrollbar-width: none;
+}
+.filter-inner::-webkit-scrollbar { display: none; }
+.filter-cat {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text3); font-weight: 700;
+  padding: 17px 16px 17px 0; white-space: nowrap; flex-shrink: 0;
+  border-right: 1px solid var(--border); margin-right: 4px;
+}
+.ftab {
+  padding: 17px 18px; font-size: 13px; font-weight: 600;
+  color: var(--text2); cursor: pointer; white-space: nowrap;
+  border: none; background: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.18s; flex-shrink: 0;
+  font-family: 'Inter', sans-serif;
+}
+.ftab:hover { color: var(--teal); }
+.ftab.active { color: var(--teal); border-bottom-color: var(--teal); }
+
+/* ── VIEWS ── */
+.gview { display: none; }
+.gview.active { display: block; }
+
+/* ── MAIN ── */
+.main { max-width: 1040px; margin: 0 auto; padding: 36px 28px 80px; }
+
+/* ── SECTION HEADER ── */
+.sh { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.sh-label {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  font-weight: 700; color: var(--text3); white-space: nowrap;
+}
+.sh-line { flex: 1; height: 1px; background: var(--border); }
+.section { margin-bottom: 36px; }
+
+/* ── BASE CARD ── */
+.card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px;
+}
+.card-title {
+  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+  color: var(--white); margin-bottom: 12px;
+}
+.card-body { font-size: 13px; color: var(--text2); line-height: 1.75; }
+
+/* ── PROFILE SUMMARY HERO ── */
+.sum-hero {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--teal);
+  border-radius: 16px; padding: 26px;
+  display: flex; gap: 24px; align-items: flex-start;
+  position: relative; overflow: hidden;
+}
+.sum-hero::after {
+  content: '';
+  position: absolute; bottom: -40px; right: -40px;
+  width: 180px; height: 180px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,212,160,0.05) 0%, transparent 70%);
+}
+.sum-avatar {
+  width: 64px; height: 64px; border-radius: 14px; flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(0,212,160,0.18), rgba(75,156,219,0.12));
+  border: 1px solid rgba(0,212,160,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800;
+  color: var(--teal);
+}
+.sum-name {
+  font-family: 'Syne', sans-serif; font-size: 24px;
+  font-weight: 800; color: var(--white); margin-bottom: 4px;
+}
+.sum-role { font-size: 13px; color: var(--text2); margin-bottom: 14px; }
+.sum-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border2);
+  border-radius: 20px; padding: 4px 11px; font-size: 11px; color: var(--text2);
+}
+.chip span { color: var(--teal); font-weight: 700; }
+
+.conf-row {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+}
+.ci-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text3); flex-shrink: 0; }
+.ci-pct { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: var(--teal); flex-shrink: 0; }
+.ci-track { flex: 1; height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+.ci-fill { height: 100%; width: 74%; background: linear-gradient(90deg, var(--teal), rgba(0,212,160,0.35)); border-radius: 3px; }
+.ci-badge {
+  font-size: 10px; color: var(--teal); font-weight: 700;
+  background: var(--teal-dim); border: 1px solid rgba(0,212,160,0.2);
+  border-radius: 20px; padding: 3px 10px; flex-shrink: 0;
+}
+
+/* ── BADGES ── */
+.badge {
+  border-radius: 20px; padding: 3px 9px; font-size: 9px;
+  font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; display: inline-block;
+}
+.b-teal   { background: var(--teal-dim);   color: var(--teal);   border: 1px solid rgba(0,212,160,0.2); }
+.b-amber  { background: var(--amber-dim);  color: var(--amber);  border: 1px solid rgba(240,165,0,0.2); }
+.b-purple { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(155,114,245,0.2); }
+.b-blue   { background: var(--blue-dim);   color: var(--blue);   border: 1px solid rgba(75,156,219,0.2); }
+.b-coral  { background: var(--coral-dim);  color: var(--coral);  border: 1px solid rgba(240,96,96,0.2); }
+.b-grey   { background: rgba(255,255,255,0.05); color: var(--text3); border: 1px solid var(--border); }
+
+/* ── SIGNAL PILLS ── */
+.sig-mini-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px,1fr)); gap: 10px; }
+.sig-mini {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-top: 3px solid transparent; border-radius: 12px; padding: 14px;
+}
+.sig-mini.high   { border-top-color: var(--teal); }
+.sig-mini.medium { border-top-color: var(--amber); }
+.sig-mini.emg    { border-top-color: var(--purple); }
+.sig-mini.none   { border-top-color: var(--text3); }
+.sm-icon { font-size: 18px; margin-bottom: 5px; }
+.sm-name { font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+.sm-level { font-size: 10px; color: var(--text3); }
+
+/* ── GRIDS ── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+/* ── STRENGTHS ── */
+.str-item {
+  background: var(--bg3); border-radius: 10px; padding: 12px 14px; margin-bottom: 8px;
+}
+.str-item:last-child { margin-bottom: 0; }
+.str-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.str-body { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+/* ── REVIEWER ATTRIBUTION ── */
+.attr-card {
+  background: var(--bg2);
+  border: 1px solid rgba(75,156,219,0.2);
+  border-top: 3px solid var(--blue);
+  border-radius: 14px; padding: 24px;
+}
+.attr-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; margin-bottom: 20px; flex-wrap: wrap;
+}
+.attr-header-text {}
+.attr-title {
+  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700;
+  color: var(--white); margin-bottom: 6px;
+}
+.attr-subtitle { font-size: 12px; color: var(--text2); line-height: 1.6; max-width: 600px; }
+.attr-warning {
+  background: var(--blue-dim); border: 1px solid rgba(75,156,219,0.2);
+  border-radius: 10px; padding: 8px 12px; font-size: 11px; color: var(--blue);
+  font-weight: 600; white-space: nowrap; flex-shrink: 0; align-self: flex-start;
+}
+
+.attr-row {
+  display: grid; grid-template-columns: 110px 1fr; gap: 16px;
+  padding: 16px 0; border-bottom: 1px solid var(--border);
+}
+.attr-row:last-child { border-bottom: none; padding-bottom: 0; }
+.attr-src-col {}
+.attr-src-label {
+  font-size: 10px; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;
+}
+.attr-src-meta { font-size: 10px; color: var(--text3); line-height: 1.5; }
+.attr-content {}
+.attr-quote {
+  background: var(--bg3); border-left: 3px solid var(--blue);
+  border-radius: 0 8px 8px 0; padding: 12px 14px;
+  font-size: 12px; color: var(--text2); line-height: 1.7; margin-bottom: 8px;
+  font-style: italic;
+}
+.attr-quote:last-child { margin-bottom: 0; }
+.attr-insight {
+  background: rgba(75,156,219,0.07); border: 1px solid rgba(75,156,219,0.15);
+  border-radius: 8px; padding: 10px 12px;
+  font-size: 11px; color: var(--text2); line-height: 1.65;
+}
+.attr-insight strong { color: var(--blue); }
+.attr-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
+/* ── PERSPECTIVES — LEADER VERSION ── */
+.persp-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+}
+.persp-intro {
+  padding: 20px 22px 16px; border-bottom: 1px solid var(--border);
+  font-size: 13px; color: var(--text2); line-height: 1.7;
+}
+.persp-intro strong { color: var(--text); }
+
+.align-block { padding: 20px 22px; border-bottom: 1px solid var(--border); }
+.align-block:last-child { border-bottom: none; }
+
+.align-top {
+  display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;
+}
+.adot {
+  width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; margin-top: 4px;
+}
+.d-green  { background: #4ade80; box-shadow: 0 0 7px rgba(74,222,128,0.55); }
+.d-yellow { background: var(--amber); box-shadow: 0 0 7px rgba(240,165,0,0.45); }
+.d-orange { background: #fb923c; box-shadow: 0 0 7px rgba(251,146,60,0.45); }
+.d-red    { background: var(--coral); box-shadow: 0 0 7px rgba(240,96,96,0.45); }
+
+.align-topic { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.align-status { font-size: 11px; color: var(--text3); margin-bottom: 0; }
+
+/* Evidence breakdown within alignment block */
+.align-evidence { margin-left: 23px; }
+
+.ev-row {
+  display: grid; grid-template-columns: 90px 1fr; gap: 10px;
+  margin-bottom: 8px;
+}
+.ev-row:last-child { margin-bottom: 0; }
+.ev-src {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; padding-top: 2px;
+}
+.ev-src.self   { color: var(--purple); }
+.ev-src.peer   { color: var(--teal); }
+.ev-src.leader { color: var(--blue); }
+.ev-text {
+  font-size: 12px; color: var(--text2); line-height: 1.6;
+  background: var(--bg3); border-radius: 8px; padding: 8px 11px;
+}
+
+.align-conclusion {
+  margin-left: 23px; margin-top: 12px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border2);
+  border-radius: 8px; padding: 10px 12px;
+  font-size: 12px; color: var(--text); line-height: 1.65;
+}
+.align-conclusion strong { color: var(--teal); }
+
+/* ── METERS ── */
+.meter-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 20px;
+}
+.m-label {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text3); font-weight: 700; margin-bottom: 12px;
+}
+.m-value { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 2px; }
+.mv-teal  { color: var(--teal); }
+.mv-blue  { color: var(--blue); }
+.mv-green { color: var(--green); }
+.m-sub    { font-size: 11px; color: var(--text3); margin-bottom: 10px; }
+.bar { height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; margin-bottom: 12px; }
+.bf-teal  { height: 100%; width: 78%; background: linear-gradient(90deg, var(--teal), rgba(0,212,160,0.3)); border-radius: 3px; }
+.bf-blue  { height: 100%; width: 65%; background: linear-gradient(90deg, var(--blue), rgba(75,156,219,0.3)); border-radius: 3px; }
+.bf-green { height: 100%; width: 72%; background: linear-gradient(90deg, var(--green), rgba(74,222,128,0.3)); border-radius: 3px; }
+.m-note { font-size: 11px; color: var(--text2); line-height: 1.6; }
+
+/* ── DEV CARDS ── */
+.dev-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-left: 3px solid var(--teal); border-radius: 14px;
+  padding: 20px; margin-bottom: 10px;
+}
+.dev-card:last-child { margin-bottom: 0; }
+.dev-title {
+  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+  color: var(--white); margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 6px;
+}
+.dev-why {
+  font-size: 12px; color: var(--text2); line-height: 1.65; margin-bottom: 10px;
+}
+.dev-evidence {
+  background: var(--bg3); border-radius: 8px; padding: 10px 12px;
+  font-size: 11px; color: var(--text2); line-height: 1.65; margin-bottom: 10px;
+  border-left: 2px solid rgba(255,255,255,0.1);
+}
+.dev-evidence strong { color: var(--text3); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+.dev-action {
+  background: var(--teal-dim); border: 1px solid rgba(0,212,160,0.15);
+  border-radius: 8px; padding: 10px 12px;
+  font-size: 12px; color: var(--teal); line-height: 1.6;
+}
+.dev-action strong { font-weight: 700; }
+
+/* ── COACHING QUESTIONS ── */
+.cq-list { list-style: none; }
+.cq-item {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-left: 3px solid var(--purple); border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 8px;
+}
+.cq-item:last-child { margin-bottom: 0; }
+.cq-q { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.6; margin-bottom: 6px; }
+.cq-q::before { content: '→ '; color: var(--purple); font-weight: 700; }
+.cq-context { font-size: 11px; color: var(--text3); line-height: 1.55; padding-left: 14px; }
+
+/* ── NEXT STEPS ── */
+.step {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 13px 16px; background: var(--bg2);
+  border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px;
+}
+.step:last-child { margin-bottom: 0; }
+.step-n {
+  background: var(--teal); color: var(--bg);
+  width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; flex-shrink: 0;
+}
+.step-body { font-size: 13px; color: var(--text2); line-height: 1.6; }
+.step-body strong { color: var(--text); }
+
+/* ── VALIDATION ── */
+.val-card {
+  background: rgba(240,165,0,0.06);
+  border: 1px solid rgba(240,165,0,0.18);
+  border-left: 3px solid var(--amber);
+  border-radius: 14px; padding: 20px; margin-bottom: 10px;
+}
+.val-title {
+  font-size: 11px; font-weight: 700; color: var(--amber);
+  margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px;
+  display: flex; align-items: center; gap: 8px;
+}
+.val-item {
+  background: rgba(255,255,255,0.03); border-radius: 8px;
+  padding: 11px 13px; margin-bottom: 8px;
+  font-size: 12px; color: var(--text2); line-height: 1.7;
+  border-left: 2px solid rgba(240,165,0,0.3);
+}
+.val-item:last-child { margin-bottom: 0; }
+.val-item strong { color: var(--amber); }
+
+/* ── BIAS ── */
+.bias-card {
+  background: var(--coral-dim);
+  border: 1px solid rgba(240,96,96,0.18);
+  border-left: 3px solid var(--coral);
+  border-radius: 14px; padding: 20px; margin-bottom: 10px;
+}
+.bias-title {
+  font-size: 11px; font-weight: 700; color: var(--coral);
+  margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;
+}
+.bias-item {
+  font-size: 12px; color: var(--text2); line-height: 1.65;
+  margin-bottom: 8px; padding-left: 18px; position: relative;
+}
+.bias-item::before { content: '⚠'; position: absolute; left: 0; font-size: 11px; }
+.bias-item:last-child { margin-bottom: 0; }
+
+/* ── SENSITIVITY ── */
+.sens-card {
+  background: var(--purple-dim);
+  border: 1px solid rgba(155,114,245,0.18);
+  border-left: 3px solid var(--purple);
+  border-radius: 14px; padding: 20px; margin-bottom: 10px;
+}
+.sens-title {
+  font-size: 11px; font-weight: 700; color: var(--purple);
+  margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;
+}
+.sens-body { font-size: 12px; color: var(--text2); line-height: 1.7; }
+
+/* ── ANON CHECK ── */
+.anon-card {
+  background: var(--teal-dim);
+  border: 1px solid rgba(0,212,160,0.18);
+  border-left: 3px solid var(--teal);
+  border-radius: 14px; padding: 18px;
+}
+.anon-title {
+  font-size: 11px; font-weight: 700; color: var(--teal);
+  margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;
+}
+.anon-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
+
+/* ── PLACEHOLDER ── */
+.placeholder-view {
+  text-align: center; padding: 80px 20px;
+}
+.ph-icon { font-size: 52px; margin-bottom: 18px; }
+.ph-title {
+  font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800;
+  color: var(--white); margin-bottom: 10px;
+}
+.ph-body { color: var(--text2); font-size: 14px; max-width: 440px; margin: 0 auto; line-height: 1.7; }
+.ph-badge {
+  margin-top: 24px; display: inline-block;
+  background: var(--teal-dim); border: 1px solid rgba(0,212,160,0.2);
+  border-radius: 20px; padding: 10px 20px;
+  font-size: 11px; color: var(--teal); font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .g2, .g3 { grid-template-columns: 1fr; }
+  .sig-mini-grid { grid-template-columns: 1fr 1fr; }
+  .ldr-header, .filter-bar { padding-left: 20px; padding-right: 20px; }
+  .main { padding: 24px 16px 60px; }
+  .sum-hero { flex-direction: column; }
+  .attr-row { grid-template-columns: 1fr; }
+  .ev-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="sandbox-banner">🌿 Sandbox Example · Fictional Employee · Developer Preview · Not Based on Real Data · Leader View</div>
+
+<!-- LEADER HEADER -->
+<div class="ldr-header">
+  <div class="ldr-eyebrow">Leader View · Growth Profiles 2026 🌱</div>
+  <div class="ldr-title">Product &amp; Experience</div>
+  <div class="ldr-sub">Conversation preparation for leaders · All profiles in one place · Confidential</div>
+  <div class="hdr-meta">
+    <div class="hdr-chip">Team size <span>3 Grifflings</span></div>
+    <div class="hdr-chip">Cycle <span>H1 2026</span></div>
+    <div class="hdr-chip">Profiles complete <span>3 / 3</span></div>
+    <div class="hdr-chip">Total review inputs <span>15</span></div>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-cat">Select Griffling</div>
+    <button class="ftab active" onclick="show('grf047',this)">GRF-047</button>
+    <button class="ftab" onclick="show('grf031',this)">GRF-031</button>
+    <button class="ftab" onclick="show('grf059',this)">GRF-059</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     GRF-047
+═══════════════════════════════════════════ -->
+<div class="gview active" id="v-grf047">
+<div class="main">
+
+  <!-- PROFILE SUMMARY HERO -->
+  <div class="section">
+    <div class="sum-hero">
+      <div class="sum-avatar">047</div>
+      <div style="flex:1;">
+        <div class="sum-name">Griffling GRF-047</div>
+        <div class="sum-role">Senior Product Designer · Mid-Senior Level · Product &amp; Experience</div>
+        <div class="sum-chips">
+          <div class="chip">Inputs <span>5</span></div>
+          <div class="chip">Self review <span>✓</span></div>
+          <div class="chip">Peers <span>3</span></div>
+          <div class="chip">Leader review <span>✓</span></div>
+          <div class="chip">Status <span>Complete</span></div>
+        </div>
+        <div class="conf-row">
+          <span class="ci-label">Profile confidence</span>
+          <span class="ci-pct">74%</span>
+          <div class="ci-track"><div class="ci-fill"></div></div>
+          <span class="ci-badge">Medium–High</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEADER OVERVIEW -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Conversation Overview</div><div class="sh-line"></div></div>
+    <div class="card">
+      <div class="card-title">What this profile is telling you</div>
+      <div class="card-body">GRF-047 is a technically strong, collaborative designer creating high-quality, consistent output. The evidence across this cycle points to someone operating at the upper boundary of their current role — with specialist depth that is well established, and leadership and mentoring behaviours that are emerging but not yet formalised.<br><br>
+      The three things most worth exploring in your conversation: <strong style="color:var(--text)">commercial awareness</strong> (the clearest gap between current and next-level contribution), <strong style="color:var(--text)">formalising the mentoring behaviour</strong> that peers are already observing but GRF-047 doesn't appear to credit themselves for, and <strong style="color:var(--text)">a clear aspiration towards design leadership</strong> that is directly expressed and deserves a real response in this conversation.<br><br>
+      Profile confidence sits at 74%. The strongest evidence surrounds design craft and collaboration. Confidence reduces around leadership readiness and commercial capability, where evidence is emerging rather than established. One important flag: the leader rating of "Transformative" was provided without supporting examples and has been treated as low-confidence input — this is worth addressing before or during the conversation.</div>
+    </div>
+  </div>
+
+  <!-- IMPACT SIGNALS -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Impact Signals Summary</div><div class="sh-line"></div></div>
+    <div class="sig-mini-grid">
+      <div class="sig-mini high"><div class="sm-icon">🧠</div><div class="sm-name">Specialist</div><div class="sm-level">High · Strong Evidence</div></div>
+      <div class="sig-mini high"><div class="sm-icon">🏗️</div><div class="sm-name">Builder</div><div class="sm-level">High · Strong Evidence</div></div>
+      <div class="sig-mini medium"><div class="sm-icon">🫱🏼‍🫲🏽</div><div class="sm-name">Multiplier</div><div class="sm-level">Medium · Moderate Evidence</div></div>
+      <div class="sig-mini emg"><div class="sm-icon">🧭</div><div class="sm-name">Navigator</div><div class="sm-level">Emerging · Low–Medium</div></div>
+      <div class="sig-mini none"><div class="sm-icon">🔥</div><div class="sm-name">Catalyst</div><div class="sm-level">Insufficient Evidence</div></div>
+      <div class="sig-mini emg"><div class="sm-icon">🌍</div><div class="sm-name">Connector</div><div class="sm-level">Emerging · Low</div></div>
+    </div>
+  </div>
+
+  <!-- STRENGTHS TO RECOGNISE -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Strengths to Recognise</div><div class="sh-line"></div></div>
+    <div class="g2">
+      <div class="card">
+        <div class="card-title">🎯 Established — name these directly</div>
+        <div class="str-item">
+          <div class="str-name">UX Research &amp; Synthesis</div>
+          <div class="str-body">Structured, evidence-led research capability consistently recognised across all review sources. This is the highest-confidence strength in the profile — name it explicitly and ask GRF-047 what they're most proud of within it.</div>
+        </div>
+        <div class="str-item">
+          <div class="str-name">Design Systems Thinking</div>
+          <div class="str-body">Multiple reviewers credit GRF-047 with building scalable patterns that make others' design work easier. This is a team-level contribution, not just individual output — worth framing that way in conversation.</div>
+        </div>
+        <div class="str-item">
+          <div class="str-name">Engineering Collaboration</div>
+          <div class="str-body">Consistently described as constructive, clear and respectful in cross-functional working. Peers highlight that GRF-047 makes handoffs smoother by explaining design rationale proactively.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🌱 Emerging — worth surfacing and naming</div>
+        <div class="str-item">
+          <div class="str-name">Informal Mentoring</div>
+          <div class="str-body">Peers describe receiving genuine design guidance from GRF-047 on more than one occasion — this is not in GRF-047's self-review at all. This is a coaching moment: help them see and own the contribution they're already making. The risk here is it continues unrecognised and underdeveloped.</div>
+        </div>
+        <div class="str-item">
+          <div class="str-name">Stakeholder Communication</div>
+          <div class="str-body">Day-to-day effectiveness is recognised. The development edge is senior and commercial contexts specifically — this is a targeted gap, not a broad communication weakness.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWER ATTRIBUTION — LEADER ONLY -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Reviewer Evidence — Leader Only, Do Not Share</div><div class="sh-line"></div></div>
+    <div class="attr-card">
+      <div class="attr-header">
+        <div class="attr-header-text">
+          <div class="attr-title">Source-attributed review evidence</div>
+          <div class="attr-subtitle">What each reviewer actually said, with the profile's interpretation of its significance. Use this to prepare for the conversation and to understand where the profile's conclusions come from. This section must not be shared with GRF-047.</div>
+        </div>
+        <div class="attr-warning">🔒 Leader view only</div>
+      </div>
+
+      <!-- SELF REVIEW -->
+      <div class="attr-row">
+        <div class="attr-src-col">
+          <div class="attr-src-label">Self Review</div>
+          <div class="attr-src-meta">Submitted<br>Complete</div>
+        </div>
+        <div class="attr-content">
+          <div class="attr-quote">"I think my strongest contribution this cycle has been in design systems — I've really pushed to make the component library more scalable and easier for the rest of the team to use. I also feel like my UX research has been stronger this year. I want to get better at the commercial side of things — I don't always know how to connect what I'm doing to the numbers that the business cares about."</div>
+          <div class="attr-quote">"Longer term I'd love to move into more of a design leadership role — I want to help shape the direction of design at Griffin, not just deliver within it."</div>
+          <div class="attr-insight">
+            <strong>Profile interpretation:</strong> GRF-047 has good self-awareness of their technical strengths and identifies commercial awareness as a genuine gap — this aligns with other evidence. The leadership aspiration is clearly articulated and consistent. Notably absent: any mention of mentoring or supporting colleagues, despite peers describing it. This underestimation is likely a confidence or framing issue rather than lack of awareness.
+          </div>
+          <div class="attr-tags">
+            <span class="badge b-teal">Aligns with profile</span>
+            <span class="badge b-amber">Mentoring gap in self-perception</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEER A -->
+      <div class="attr-row">
+        <div class="attr-src-col">
+          <div class="attr-src-label">Peer A</div>
+          <div class="attr-src-meta">Engineering<br>Same squad</div>
+        </div>
+        <div class="attr-content">
+          <div class="attr-quote">"GRF-047 is genuinely the person I go to when I'm stuck on a design problem. They always take the time to explain their thinking, which makes handoffs so much smoother. The quality of what they produce is consistently excellent — I don't think I've ever had to push back on something that came from them."</div>
+          <div class="attr-insight">
+            <strong>Profile interpretation:</strong> Strong, specific recognition of design craft and engineering collaboration. The comment about explaining thinking during handoffs is a direct observable behaviour — this is the kind of evidence that earns high confidence. No development observations offered, which may reflect the reviewer's visibility being primarily in delivery and collaboration rather than GRF-047's broader growth edge.
+          </div>
+          <div class="attr-tags">
+            <span class="badge b-teal">Supports Specialist signal</span>
+            <span class="badge b-teal">Supports Builder signal</span>
+            <span class="badge b-grey">Limited development visibility</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEER B -->
+      <div class="attr-row">
+        <div class="attr-src-col">
+          <div class="attr-src-label">Peer B</div>
+          <div class="attr-src-meta">Product<br>Cross-squad</div>
+        </div>
+        <div class="attr-content">
+          <div class="attr-quote">"There was a project earlier this year where GRF-047's research basically changed the whole product direction — they found something in the data that none of us had spotted and it saved us from building the wrong thing. I think they could do more to share that kind of work more broadly though — sometimes it feels like the insight stays within the squad."</div>
+          <div class="attr-quote">"In stakeholder presentations I sometimes notice they get a bit quiet when things go commercial — like they're less confident framing design decisions in that language."</div>
+          <div class="attr-insight">
+            <strong>Profile interpretation:</strong> Highest-specificity peer review in the set. The research example is directly evidenced with a named outcome (changed product direction, avoided building wrong product) — this carries significant weight. The development observations about broader sharing and commercial framing in presentations are valuable and specific. The stakeholder observation aligns with both self-reflection and the leader's view, making this a high-confidence development theme.
+          </div>
+          <div class="attr-tags">
+            <span class="badge b-teal">Supports Specialist — high specificity</span>
+            <span class="badge b-amber">Commercial framing gap — confirmed</span>
+            <span class="badge b-purple">Connector opportunity — named directly</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEER C -->
+      <div class="attr-row">
+        <div class="attr-src-col">
+          <div class="attr-src-label">Peer C</div>
+          <div class="attr-src-meta">Design<br>Same chapter</div>
+        </div>
+        <div class="attr-content">
+          <div class="attr-quote">"Honestly GRF-047 has helped me develop my own practice more than anyone else on the team. Not in a formal way — it's more that whenever I'm struggling with something they always know the right question to ask or the right framework to use. I feel like I've grown more this cycle because of those conversations."</div>
+          <div class="attr-quote">"The component library work has been a game changer for the chapter — things that used to take me half a day now take an hour. That's all GRF-047."</div>
+          <div class="attr-insight">
+            <strong>Profile interpretation:</strong> This is the strongest signal supporting the Multiplier impact signal. The mentoring described is not incidental — it has a named impact on this reviewer's development. Critically, GRF-047 has not mentioned any of this in their self-review. The component library observation also independently corroborates the Builder signal with a specific, measurable time-saving outcome. This reviewer has closest visibility into day-to-day design chapter behaviours.
+          </div>
+          <div class="attr-tags">
+            <span class="badge b-teal">Strongest Multiplier evidence</span>
+            <span class="badge b-teal">Builder — measurable outcome cited</span>
+            <span class="badge b-amber">GRF-047 unaware of own impact here</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADER REVIEW -->
+      <div class="attr-row">
+        <div class="attr-src-col">
+          <div class="attr-src-label">Leader Review</div>
+          <div class="attr-src-meta">You<br>Direct leader</div>
+        </div>
+        <div class="attr-content">
+          <div class="attr-quote">"GRF-047 is one of my most reliable people — they consistently deliver high-quality work and I never have to worry about the design side of things when they're involved. I do think they're approaching the ceiling of what they can do at their current level. They need to get more commercially savvy. I've rated them as Transformative this cycle."</div>
+          <div class="attr-insight">
+            <strong>Profile interpretation:</strong> The narrative observation about approaching the role ceiling and commercial development aligns strongly with other evidence — this is a well-evidenced view. However, the "Transformative" rating has been treated as <strong>low-confidence input</strong> in this profile because no specific behavioural examples were provided to support it. Before your conversation, consider: what specific things has GRF-047 done this cycle that justify a Transformative rating? If you have examples in mind that weren't in the review, this is worth revisiting — it also gives GRF-047 something concrete and meaningful to hear.
+          </div>
+          <div class="attr-tags">
+            <span class="badge b-teal">Commercial gap — aligns with evidence</span>
+            <span class="badge b-coral">Rating unsupported — low confidence</span>
+            <span class="badge b-amber">Prepare examples before conversation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMPLEXITY / SCOPE / READINESS -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Complexity · Scope · Readiness</div><div class="sh-line"></div></div>
+    <div class="g3">
+      <div class="meter-card">
+        <div class="m-label">Complexity Handled</div>
+        <div class="m-value mv-teal">High</div>
+        <div class="m-sub">Evidence based assessment</div>
+        <div class="bar"><div class="bf-teal"></div></div>
+        <div class="m-note">High complexity within the design and product domain is well evidenced. Worth noting: complexity is concentrated in UX and design problem-solving — there is limited evidence across regulatory, financial or operational complexity. This likely reflects the current role scope rather than a capability ceiling, but is worth exploring.</div>
+      </div>
+      <div class="meter-card">
+        <div class="m-label">Scope of Influence</div>
+        <div class="m-value mv-blue">Cross-Functional</div>
+        <div class="m-sub">Where influence is currently visible</div>
+        <div class="bar"><div class="bf-blue"></div></div>
+        <div class="m-note">Influence spans the product squad and extends informally into engineering and PM. Informal influence on design direction appears stronger than formal authority. Not yet demonstrating Griffin-wide or strategic influence — but readiness to expand is evidenced.</div>
+      </div>
+      <div class="meter-card">
+        <div class="m-label">Future Readiness</div>
+        <div class="m-value mv-green">Strong</div>
+        <div class="m-sub">Direction of growth — not a promotion signal</div>
+        <div class="bar"><div class="bf-green"></div></div>
+        <div class="m-note">Readiness signals are building across specialist depth and early leadership. Key conditions needed: formal mentoring opportunity, earlier strategic product involvement, commercial exposure. Positive trajectory — the conditions are yours to create.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSPECTIVES & ALIGNMENT — RICH LEADER VERSION -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Perspectives &amp; Alignment Analysis</div><div class="sh-line"></div></div>
+    <div class="persp-card">
+      <div class="persp-intro">
+        The purpose of this section is not to determine who is right. It is to help you understand <strong>how different perspectives combine</strong> to form this profile's conclusions — and where the evidence is strong, partial, or in tension. Each theme below shows what each reviewer actually contributed to it and why the profile reached its conclusion. Use this to prepare for conversation rather than to resolve disagreements.
+      </div>
+
+      <!-- THEME 1: DESIGN CRAFT -->
+      <div class="align-block">
+        <div class="align-top">
+          <div class="adot d-green"></div>
+          <div>
+            <div class="align-topic">Design craft and quality of output</div>
+            <div class="align-status">🟢 Strongly Aligned · High Confidence · All sources consistent</div>
+          </div>
+        </div>
+        <div class="align-evidence">
+          <div class="ev-row">
+            <div class="ev-src self">Self</div>
+            <div class="ev-text">Identifies design systems and UX research as core strengths — specific and credible self-assessment.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer A</div>
+            <div class="ev-text">"Quality is consistently excellent — I've never had to push back on something that came from them." Direct, specific observation from someone with daily delivery visibility.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer B</div>
+            <div class="ev-text">Cites a specific project where GRF-047's research changed the product direction and prevented a wrong build. Named outcome, high specificity.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer C</div>
+            <div class="ev-text">Component library described as saving half a day's work per task across the chapter — quantified, recurring impact.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src leader">Leader</div>
+            <div class="ev-text">"I never have to worry about the design side of things when they're involved." High trust, though without specific example.</div>
+          </div>
+        </div>
+        <div class="align-conclusion"><strong>Conclusion:</strong> This is the highest-confidence theme in the profile. Name it explicitly and specifically in the conversation — GRF-047 will recognise this feedback as real and earned.</div>
+      </div>
+
+      <!-- THEME 2: MENTORING -->
+      <div class="align-block">
+        <div class="align-top">
+          <div class="adot d-yellow"></div>
+          <div>
+            <div class="align-topic">Mentoring and enabling others</div>
+            <div class="align-status">🟡 Partially Aligned · Medium Confidence · Gap between peer observation and self-perception</div>
+          </div>
+        </div>
+        <div class="align-evidence">
+          <div class="ev-row">
+            <div class="ev-src self">Self</div>
+            <div class="ev-text">Not mentioned at all in self-review. GRF-047 does not appear to see or credit this as part of their contribution.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer A</div>
+            <div class="ev-text">Not directly observed — Peer A's visibility is primarily in delivery and handoffs rather than chapter-level mentoring.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer B</div>
+            <div class="ev-text">Not directly commented on — cross-squad peer may have less visibility into informal chapter mentoring.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer C</div>
+            <div class="ev-text">"GRF-047 has helped me develop my own practice more than anyone else on the team — I've grown more this cycle because of those conversations." Strongest, most specific evidence in the set for this theme.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src leader">Leader</div>
+            <div class="ev-text">Not mentioned in leader review — suggests limited visibility into chapter-level mentoring behaviours.</div>
+          </div>
+        </div>
+        <div class="align-conclusion"><strong>Conclusion:</strong> The evidence comes from one reviewer but is highly specific and credible. The more significant finding is the complete absence of this behaviour from GRF-047's own self-view. <strong>This is your most important coaching moment</strong> — help GRF-047 see and own the impact they are already having on others. Ask: "I've heard that you've been really helpful to colleagues in developing their design practice — is that something you do intentionally?"</div>
+      </div>
+
+      <!-- THEME 3: COMMERCIAL FRAMING -->
+      <div class="align-block">
+        <div class="align-top">
+          <div class="adot d-green"></div>
+          <div>
+            <div class="align-topic">Commercial awareness as a development area</div>
+            <div class="align-status">🟢 Strongly Aligned · High Confidence · Self, peers and leader all consistent</div>
+          </div>
+        </div>
+        <div class="align-evidence">
+          <div class="ev-row">
+            <div class="ev-src self">Self</div>
+            <div class="ev-text">"I don't always know how to connect what I'm doing to the numbers that the business cares about." — Self-identified, honest, specific.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer B</div>
+            <div class="ev-text">"In stakeholder presentations I sometimes notice they get a bit quiet when things go commercial — like they're less confident framing design decisions in that language."</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src leader">Leader</div>
+            <div class="ev-text">"They need to get more commercially savvy." — Named explicitly as a development priority.</div>
+          </div>
+        </div>
+        <div class="align-conclusion"><strong>Conclusion:</strong> Unusually strong alignment across self, peers and leader — all three perspectives independently identify the same gap. This removes ambiguity: it is a real, well-evidenced development area. The good news is that GRF-047 already knows this and has named it themselves. That self-awareness is a strong starting point — the conversation is about the <em>how</em>, not convincing them the gap exists.</div>
+      </div>
+
+      <!-- THEME 4: LEADER RATING -->
+      <div class="align-block">
+        <div class="align-top">
+          <div class="adot d-yellow"></div>
+          <div>
+            <div class="align-topic">Leader "Transformative" rating vs available evidence</div>
+            <div class="align-status">🟡 Partially Aligned · Low–Medium Confidence · Rating not supported by examples in review</div>
+          </div>
+        </div>
+        <div class="align-evidence">
+          <div class="ev-row">
+            <div class="ev-src leader">Leader</div>
+            <div class="ev-text">Rating of "Transformative" provided. No specific behaviours, outcomes or examples given to support this rating in the review submission.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer evidence</div>
+            <div class="ev-text">Peer evidence is consistently positive and specific, but describes strong delivery and collaboration rather than transformative or organisation-changing impact.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src self">Self</div>
+            <div class="ev-text">Self-review describes strong individual and team contribution but does not frame it as transformative in scope.</div>
+          </div>
+        </div>
+        <div class="align-conclusion"><strong>Conclusion:</strong> The rating has been treated as low-confidence input in this profile because it is not supported by evidence in the review. This does not mean the rating is wrong — you may have context or observations that were not captured in the review form. <strong>Before your conversation:</strong> identify 2–3 specific examples of transformative contribution you can share with GRF-047. This turns the rating into something meaningful and developmental rather than a label without substance.</div>
+      </div>
+
+      <!-- THEME 5: READINESS -->
+      <div class="align-block">
+        <div class="align-top">
+          <div class="adot d-yellow"></div>
+          <div>
+            <div class="align-topic">Readiness for greater scope and leadership</div>
+            <div class="align-status">🟡 Partially Aligned · Medium Confidence · Aspiration clear, evidence developing</div>
+          </div>
+        </div>
+        <div class="align-evidence">
+          <div class="ev-row">
+            <div class="ev-src self">Self</div>
+            <div class="ev-text">"I'd love to move into more of a design leadership role — I want to help shape the direction of design at Griffin, not just deliver within it." Clearly stated, consistent with other aspirational signals.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src peer">Peer B &amp; C</div>
+            <div class="ev-text">Describe influence and impact behaviours that suggest someone ready to operate at broader scope — but framed as current observations rather than readiness assessments.</div>
+          </div>
+          <div class="ev-row">
+            <div class="ev-src leader">Leader</div>
+            <div class="ev-text">"I do think they're approaching the ceiling of what they can do at their current level." — Acknowledges the trajectory without specifying what next looks like.</div>
+          </div>
+        </div>
+        <div class="align-conclusion"><strong>Conclusion:</strong> The aspiration is real and clearly evidenced. The readiness signals are building but not yet fully demonstrated. The most useful conversation is about <em>what specifically the next chapter of development looks like</em> and what conditions would help GRF-047 get there — not whether they might progress, but how. This is a conversation you can have proactively and with genuine substance.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DEVELOPMENT THEMES -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Development Themes &amp; Suggested Actions</div><div class="sh-line"></div></div>
+
+    <div class="dev-card">
+      <div class="dev-title">Connecting design to commercial outcomes <span class="badge b-amber">Evidence: Strong</span></div>
+      <div class="dev-why">This is the most consistently evidenced development area in the profile — confirmed independently by self-reflection, peer observation and the leader review. It is also the development area most directly connected to GRF-047's own leadership aspiration. Design leaders who cannot articulate commercial impact have a ceiling on their influence; this is the work that removes that ceiling.</div>
+      <div class="dev-evidence"><strong>Evidence basis:</strong> Self-identified ("I don't always know how to connect what I'm doing to the numbers"). Peer B observed reduced confidence in commercial stakeholder moments. Leader identified commercial savvy as the key development priority.</div>
+      <div class="dev-action"><strong>Suggested action:</strong> Include GRF-047 in the next commercial performance or product prioritisation review. Before the session, help them prepare by framing the question: "What is the design work this cycle worth in business terms?" — not to have the right answer, but to practise the thinking. Review this in your next 1:1.</div>
+    </div>
+
+    <div class="dev-card">
+      <div class="dev-title">Making mentoring intentional <span class="badge b-amber">Evidence: Moderate</span></div>
+      <div class="dev-why">This is the development opportunity with the biggest confidence gap: the behaviour is happening organically and having real impact, but GRF-047 is not aware of it, not claiming it, and not developing it deliberately. Left unaddressed, it will continue as incidental rather than growing into a genuine capability and signal of leadership readiness. The first step is simply helping GRF-047 see what they are already doing.</div>
+      <div class="dev-evidence"><strong>Evidence basis:</strong> Peer C describes being helped to grow their own practice, calling out specific conversations and their developmental impact. Peer A also references GRF-047's explanation style during handoffs as enabling. GRF-047 does not mention any of this in their self-review.</div>
+      <div class="dev-action"><strong>Suggested action:</strong> In the conversation, name what you've heard specifically — without attributing it directly. Then offer a formal mentoring pairing within the design chapter as a structure for making this intentional. Set a 4-week target to agree the pairing and revisit impact at mid-cycle.</div>
+    </div>
+
+    <div class="dev-card">
+      <div class="dev-title">Expanding cross-functional visibility <span class="badge b-purple">Evidence: Emerging</span></div>
+      <div class="dev-why">GRF-047's aspiration to shape design direction at Griffin rather than just deliver within their squad requires broader visibility. Evidence suggests readiness signals are developing, but the opportunity hasn't yet existed. This is something you can directly create — it is not about waiting for GRF-047 to push for it, but about giving them the platform.</div>
+      <div class="dev-evidence"><strong>Evidence basis:</strong> Peer B notes that research insights "stay within the squad" when they could have broader value. Leadership aspiration explicitly references wanting to influence Griffin-level design direction.</div>
+      <div class="dev-action"><strong>Suggested action:</strong> Identify one cross-functional initiative or Griffin-wide forum where design perspective would add value and GRF-047 could represent the chapter. Discuss in the conversation: "Here's an opportunity I'm thinking of — what would it mean for you to take that on?"</div>
+    </div>
+  </div>
+
+  <!-- COACHING QUESTIONS -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Coaching Questions for the Conversation</div><div class="sh-line"></div></div>
+    <ul class="cq-list">
+      <li class="cq-item">
+        <div class="cq-q">When you think about your most impactful work this cycle — how do you know it had impact? What would you do differently to make that impact more visible?</div>
+        <div class="cq-context">Why ask: helps surface the commercial framing gap in a non-threatening way. GRF-047 will likely describe impact in design terms; the follow-up is "how would you describe that in a way a CFO would care about?"</div>
+      </li>
+      <li class="cq-item">
+        <div class="cq-q">I've heard that you've been really helpful to some of your colleagues in developing their design practice this cycle. Is that something you do intentionally — and is it something you'd want to build on?</div>
+        <div class="cq-context">Why ask: surfaces the mentoring behaviour GRF-047 doesn't credit themselves for. Don't reveal the source. The goal is for GRF-047 to recognise and own it.</div>
+      </li>
+      <li class="cq-item">
+        <div class="cq-q">You've said you want to move into design leadership and help shape Griffin's design direction rather than just deliver within it. What would need to be true for you to feel like you were on that path?</div>
+        <div class="cq-context">Why ask: makes the aspiration concrete and actionable. Gives you information about what GRF-047 actually needs, rather than assuming.</div>
+      </li>
+      <li class="cq-item">
+        <div class="cq-q">If you were presenting a significant design decision to a senior commercial stakeholder tomorrow — how would you frame it? What would you want them to take away?</div>
+        <div class="cq-context">Why ask: directly explores the commercial framing gap in a practical, forward-looking way. Useful for agreeing what the development work actually looks like.</div>
+      </li>
+      <li class="cq-item">
+        <div class="cq-q">Where do you feel you're being stretched most right now — and where could I do more to support that stretch?</div>
+        <div class="cq-context">Why ask: gives GRF-047 agency and gives you information about what support would actually land. Keep this question genuinely open.</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SUGGESTED NEXT STEPS -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Suggested Next Steps</div><div class="sh-line"></div></div>
+    <div class="step"><div class="step-n">1</div><div class="step-body"><strong>Before the conversation:</strong> Prepare 2–3 specific examples to support the "Transformative" rating you provided — or revisit whether that rating reflects the evidence you have. Either way, GRF-047 deserves to hear the specifics.</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-body"><strong>In the conversation:</strong> Name the mentoring contribution explicitly. Help GRF-047 see and own the impact they are having on colleagues — this is the most underdeveloped strength in the profile.</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-body"><strong>Within 4 weeks:</strong> Agree a formal mentoring pairing within the design chapter. Set a target date in the conversation and own the follow-through.</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-body"><strong>Within 4 weeks:</strong> Identify and confirm one cross-functional or Griffin-wide opportunity for GRF-047 to represent the design chapter. Bring a specific suggestion to the conversation.</div></div>
+    <div class="step"><div class="step-n">5</div><div class="step-body"><strong>Ongoing:</strong> Create structured access to commercial performance discussions. The development goal is to help GRF-047 build the habit of connecting design decisions to business outcomes — this requires repeated exposure, not a one-off session.</div></div>
+  </div>
+
+  <!-- VALIDATION NOTES -->
+  <div class="section">
+    <div class="sh"><div class="sh-label">Validation Notes</div><div class="sh-line"></div></div>
+
+    <div class="val-card">
+      <div class="val-title">🔍 Points to validate before or during the conversation</div>
+      <div class="val-item"><strong>Leader rating evidence:</strong> "Transformative" rating submitted without supporting examples. The profile has treated this as low-confidence input — this does not mean the rating is wrong, but the evidence base needs strengthening. Prepare specific examples before the conversation.</div>
+      <div class="val-item"><strong>Mentoring self-awareness:</strong> GRF-047 does not appear to recognise their own mentoring contribution. Validate in conversation whether this reflects a genuine blind spot or whether they are aware of it but don't consider it part of their "official" contribution.</div>
+      <div class="val-item"><strong>Complexity range:</strong> Available evidence concentrates complexity in UX and design problem-solving. Consider whether current role allocation is limiting GRF-047's exposure to broader complexity — and whether this is worth addressing proactively.</div>
+      <div class="val-item"><strong>Leadership aspiration specificity:</strong> The aspiration to move into design leadership is clearly expressed but not yet detailed. Explore what "leadership" means to GRF-047 specifically — this will help you understand whether the aspiration is realistic in the near term or requires longer-term investment.</div>
+    </div>
+
+    <div class="bias-card">
+      <div class="bias-title">⚠️ Possible bias considerations</div>
+      <div class="bias-item">Peer feedback is consistently positive with limited constructive challenge. Consider whether peers have full visibility into development areas, or whether social proximity is shaping the tone of responses — particularly from Peer A, who has the closest working relationship.</div>
+      <div class="bias-item">GRF-047's self-underestimation of mentoring contribution could be misread as absence of strength. Take care not to let the absence of self-credit reduce how this is weighted in your own assessment.</div>
+      <div class="bias-item">The leader rating without examples may reflect genuine strong assessment based on broader context — but it may also reflect advocacy bias or positive halo effect. Ground the conversation in specific behaviours and outcomes.</div>
+    </div>
+
+    <div class="sens-card">
+      <div class="sens-title">📋 Sensitivity notes</div>
+      <div class="sens-body">GRF-047 has expressed clear aspirations towards leadership. These should be taken seriously and addressed directly in the conversation — not acknowledged and moved on from. Avoid creating the impression that the aspiration is premature; the evidence suggests genuine readiness signals are developing and the trajectory is positive. This profile does not make a promotion recommendation — that remains a decision for you, the people team and any relevant governance processes informed by broader context.</div>
+    </div>
+
+    <div class="anon-card">
+      <div class="anon-title">🔐 Reviewer anonymity check</div>
+      <div class="anon-body">The Griffling view for GRF-047 contains no reviewer-identifying information. Peer comments have been synthesised into evidence themes only. This leader view contains source-attributed evidence for leader preparation purposes and must not be shared directly with GRF-047. All outputs have been reviewed against anonymisation standards before generation.</div>
+    </div>
+  </div>
+
+</div>
+</div><!-- /grf047 -->
+
+
+<!-- ══════════════════ GRF-031 PLACEHOLDER ══════════════════ -->
+<div class="gview" id="v-grf031">
+  <div class="main">
+    <div class="placeholder-view">
+      <div class="ph-icon">🌱</div>
+      <div class="ph-title">GRF-031 Profile</div>
+      <div class="ph-body">In a live deployment this would display the full Growth Profile for Griffling GRF-031. In this sandbox, only GRF-047 is fully generated to demonstrate the tool's capabilities.</div>
+      <div class="ph-badge">Sandbox · Single Profile Generated</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ GRF-059 PLACEHOLDER ══════════════════ -->
+<div class="gview" id="v-grf059">
+  <div class="main">
+    <div class="placeholder-view">
+      <div class="ph-icon">🌱</div>
+      <div class="ph-title">GRF-059 Profile</div>
+      <div class="ph-body">In a live deployment this would display the full Growth Profile for Griffling GRF-059. In this sandbox, only GRF-047 is fully generated to demonstrate the tool's capabilities.</div>
+      <div class="ph-badge">Sandbox · Single Profile Generated</div>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.gview').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+  document.getElementById('v-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
